@@ -2,9 +2,7 @@
 <project version="4">
   <component name="ChangeListManager">
     <list default="true" id="a30e6656-74f5-4636-a4ed-33fae51d64b7" name="Default" comment="">
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/kantanotes/db.sqlite3" afterPath="$PROJECT_DIR$/kantanotes/db.sqlite3" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/kantanotes/notes/admin.py" afterPath="$PROJECT_DIR$/kantanotes/notes/admin.py" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/kantanotes/notes/models.py" afterPath="$PROJECT_DIR$/kantanotes/notes/models.py" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/.idea/workspace.xml" afterPath="$PROJECT_DIR$/.idea/workspace.xml" />
     </list>
     <ignored path="COMP204P.iws" />
     <ignored path=".idea/workspace.xml" />

@@ -9,20 +9,28 @@ class Categories(models.Model):
     userId = models.ForeignKey(User)
 
     def __str__(self):
-        return self.comment
+        return self.description
 
 
 
 class Notes(models.Model):
     """Note"""
     title = models.CharField('title', max_length=255)
-    url = models.CharField('Note Url', max_length=255, blank=True)
     description = models.CharField('description', max_length=255, blank=True)
     userId = models.ForeignKey(User)
     categoryId = models.ForeignKey(Categories, verbose_name='category', related_name='notes')
     # TODO:  implements validator
 
     def __str__(self):
-        return self.name
+        return self.title
+
+
+class Links(models.Model):
+    """Note"""
+    url = models.CharField('Note Url', max_length=255, blank=True)
+    noteId = models.ForeignKey(Notes, verbose_name='note', related_name='links')
+
+    def __str__(self):
+        return self.url
 
 

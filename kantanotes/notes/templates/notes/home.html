@@ -1,0 +1,12 @@
+{% extends "notes/base.html" %}
+
+{% block content %}
+
+	{% for cat in object_list %}
+
+		<h5> {{ cat.categoryName }}  {{ cat.userId }} </h5>
+
+	{% endfor %}
+
+
+{% endblock %}

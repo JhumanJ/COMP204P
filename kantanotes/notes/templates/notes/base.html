@@ -58,12 +58,13 @@
             <div class="panel-body">
             {% if errorMessage %}
                 <div class="alert alert-warning">
-                    <strong>Warning!</strong> 
+                    <strong>Warning!</strong> {{ errorMessage }}
                 </div>
-            {% endif %}
+            {% else %}
 
             {% block content %}
             {% endblock %}
+            {% endif %}
             </div>
 
         </div>

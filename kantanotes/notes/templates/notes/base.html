@@ -42,11 +42,11 @@
              {% for cat in categorieslist %}
 
                 <div class="list-group-item" style="height:40px;">
-                    <div class="col-md-9">                
+                    <div class="col-xs-9">
                       <a type="button"  href="{% url 'notes:displayNotes' cat.id %}" >{{  cat.categoryName}}  {{ cat.description }}</a>
                     </div>
-                    <div class="col-md-3">
-                      <a href="{% url 'notes:deleteCategory' cat.id %}"><span class="glyphicon glyphicon-minus" aria-hidden="true"></span></a>
+                    <div class="col-xs-3">
+                      <a href="{% url 'notes:deleteCategory' cat.id %}"><span class="glyphicon glyphicon-trash" style="color: darkred;" aria-hidden="true"></span></a>
                     </div>
                 </div>
 

@@ -38,7 +38,14 @@
         <div class="list-group">
              {% for cat in categorieslist %}
 
-                <a type="button" class="list-group-item" href="{% url 'notes:displayNotes' cat.id %}" >{{ cat.categoryName }}  {{ cat.description }}</a>
+                <div class="list-group-item" style="height:40px;">
+                    <div class="col-md-9">                
+                      <a type="button"  href="{% url 'notes:displayNotes' cat.id %}" >{{  cat.categoryName}}  {{ cat.description }}</a>
+                    </div>
+                    <div class="col-md-3">
+                      <a href="{% url 'notes:deleteCategory' cat.id %}"><span class="glyphicon glyphicon-minus" aria-hidden="true"></span></a>
+                    </div>
+                </div>
 
              {% endfor %}
         </div>
@@ -49,6 +56,12 @@
 	<div id="content" class="col-md-9">
         <div class="panel panel-default">
             <div class="panel-body">
+            {% if errorMessage %}
+                <div class="alert alert-warning">
+                    <strong>Warning!</strong> 
+                </div>
+            {% endif %}
+
             {% block content %}
             {% endblock %}
             </div>

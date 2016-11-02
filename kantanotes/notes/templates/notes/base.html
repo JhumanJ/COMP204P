@@ -12,14 +12,25 @@
     <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/js/bootstrap.min.js" integrity="sha384-Tc5IQib027qvyjSMfHjOMaLkfuWVxZxUPnCJA7l2mCWNIpG9mGCD8wGNIcPD7Txa" crossorigin="anonymous"></script>
 </head>
 <body>
-    <nav class="navbar navbar-default">
-      <div class="container-fluid">
-        <div class="navbar-header">
-          <a class="navbar-brand" href="#">
-            Kantanotes
-          </a>
+    <nav class="navbar navbar-default navbar-inverse">
+      <div class="container">
+            <div class="navbar-header">
+                <button type="button" class="navbar-toggle" data-toggle="collapse" data-target="#bs-example-navbar-collapse-1">
+                    <span class="sr-only">Toggle navigation</span>
+                    <span class="icon-bar"></span>
+                    <span class="icon-bar"></span>
+                    <span class="icon-bar"></span>
+                </button>
+                <a class="navbar-brand" href="{% url 'notes:index' %}">Kantanotes</a>
+            </div>
+            <div class="collapse navbar-collapse" id="bs-example-navbar-collapse-1">
+                <ul class="nav navbar-nav navbar-right">
+                    <li>
+                        <a href="{% url 'logout' %}">Logout</a>
+                    </li>
+                </ul>
+            </div>
         </div>
-      </div>
     </nav>
 
 	<div id="categories" class="col-md-3">
@@ -27,7 +38,7 @@
         <div class="list-group">
              {% for cat in categorieslist %}
 
-                <a type="button" class="list-group-item" href="{% url 'displayNotes' cat.id %}" >{{ cat.categoryName }}  {{ cat.description }}</a>
+                <a type="button" class="list-group-item" href="{% url 'notes:displayNotes' cat.id %}" >{{ cat.categoryName }}  {{ cat.description }}</a>
 
              {% endfor %}
         </div>

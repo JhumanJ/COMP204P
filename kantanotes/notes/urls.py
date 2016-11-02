@@ -3,7 +3,11 @@ from django.views.generic import ListView, DetailView
 from notes.models import Categories, Notes
 from . import views
 
-urlpatterns = [url(r'^$', views.index, name='index')]
+urlpatterns = [url(r'^$', views.index, name='index'),
+			   url(r'^(?P<Categories_Id>[0-9]+)/displayNotes/$', views.displayNotes, name='displayNotes'),
+			   ]
+
+
 
 
 # urlpatterns = [url(r'^$', ListView.as_view(queryset=Notes.objects.all(),

@@ -27,7 +27,7 @@
         <div class="list-group">
              {% for cat in categorieslist %}
 
-                <button type="button" class="list-group-item">{{ cat.categoryName }}  {{ cat.description }}</button>
+                <a type="button" class="list-group-item" href="{% url 'displayNotes' cat.id %}" >{{ cat.categoryName }}  {{ cat.description }}</a>
 
              {% endfor %}
         </div>

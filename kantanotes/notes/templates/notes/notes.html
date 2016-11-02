@@ -1,0 +1,12 @@
+{% extends "notes/base.html" %}
+
+{% block notes %}
+
+	{% for notes in object_list %}
+
+		<h5> {{ notes.title }}  {{ notes.description }} </h5>
+
+	{% endfor %}
+
+
+{% endblock %}

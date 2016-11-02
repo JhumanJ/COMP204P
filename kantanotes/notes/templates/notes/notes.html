@@ -1,8 +1,8 @@
 {% extends "notes/base.html" %}
 
-{% block notes %}
+{% block content %}
 
-	{% for notes in object_list %}
+	{% for notes in noteslist %}
 
 		<h5> {{ notes.title }}  {{ notes.description }} </h5>
 

@@ -7,4 +7,4 @@ def index(request):
     categorieslist = Categories.objects.all()
     noteslist = Notes.objects.all()
     context = {'categorieslist': categorieslist,'noteslist':noteslist}
-    return render(request, 'notes/categories.html', context)
+    return render(request, 'notes/notes.html', context)
